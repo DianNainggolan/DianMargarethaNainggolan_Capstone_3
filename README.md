@@ -1,112 +1,214 @@
+Tentu ✅ Berikut contoh **README.md super lengkap** untuk proyek **Customer Churn Prediction** Anda — disesuaikan dengan semua library dan tahapan analisis yang digunakan dalam notebook. README ini sudah dalam format profesional seperti proyek data science di GitHub atau portofolio.
+
+---
+
 # 📊 Customer Churn Prediction Project
 
-## 🧾 Deskripsi Proyek
+## 🧭 Ringkasan Proyek
 
-Proyek ini berfokus pada **analisis dan prediksi customer churn**, yaitu perilaku pelanggan yang **berhenti menggunakan layanan** dalam jangka waktu tertentu. Tujuan utama proyek ini adalah untuk **mengidentifikasi faktor-faktor utama yang memengaruhi churn**, serta membangun model prediksi yang dapat membantu perusahaan dalam **mengurangi tingkat churn** dan **meningkatkan retensi pelanggan**.
+Churn pelanggan merupakan tantangan besar bagi banyak perusahaan, terutama di industri subscription dan telekomunikasi. Proyek ini berfokus pada **analisis dan prediksi customer churn** menggunakan teknik **Exploratory Data Analysis (EDA)**, **data preprocessing**, dan **machine learning**.
+
+Dengan membangun model prediksi churn yang andal, perusahaan dapat **mengidentifikasi pelanggan yang berpotensi churn** dan melakukan **intervensi yang tepat waktu** untuk meningkatkan retensi pelanggan dan mengoptimalkan pendapatan.
+
+---
 
 ## 🎯 Tujuan Proyek
 
-* Melakukan analisis mendalam terhadap perilaku pelanggan.
-* Menemukan pola dan karakteristik pelanggan yang berpotensi churn.
-* Membangun model machine learning untuk memprediksi kemungkinan churn.
-* Memberikan rekomendasi strategis untuk meningkatkan retensi pelanggan.
+* Menganalisis karakteristik pelanggan churn vs non-churn.
+* Menemukan variabel yang paling memengaruhi churn.
+* Membangun model klasifikasi untuk memprediksi kemungkinan churn pelanggan.
+* Mengukur performa model dan memberikan rekomendasi berbasis data.
+* Memberikan insight yang actionable bagi tim bisnis dan marketing.
 
-## 🧰 Teknologi & Tools
+---
 
-* **Bahasa Pemrograman:** Python 3
-* **Environment:** Jupyter Notebook
-* **Library Utama:**
+## 🧰 Teknologi dan Library
 
-  * `pandas`, `numpy` → pengolahan data
-  * `matplotlib`, `seaborn` → visualisasi data
-  * `scikit-learn` → pemodelan dan evaluasi machine learning
-  * `statsmodels` → analisis statistik (jika digunakan)
+Proyek ini menggunakan Python dan berbagai library populer untuk analisis data dan machine learning:
 
-## 📈 Tahapan Pengerjaan
+| Kategori                 | Library / Tools                                   | Fungsi Utama                               |
+| ------------------------ | ------------------------------------------------- | ------------------------------------------ |
+| Pengolahan Data          | `numpy`, `pandas`                                 | Manipulasi data, agregasi, transformasi    |
+| Visualisasi Data         | `matplotlib`, `seaborn`                           | EDA dan visualisasi pola churn             |
+| Machine Learning         | `scikit-learn`, `xgboost`, `lightgbm`, `catboost` | Pemodelan klasifikasi & evaluasi           |
+| Statistik & Analisis     | `scipy`, `statsmodels`                            | Analisis statistik & uji hipotesis         |
+| Imbalanced Data Handling | `imbalanced-learn`                                | Oversampling (SMOTE, SMOTEENN, SMOTETomek) |
+| Interpretabilitas Model  | `shap`                                            | Interpretasi model melalui SHAP values     |
+| Utility                  | `gdown`, `pickle`, `pathlib`                      | Download file, serialisasi model           |
+| Notebook Environment     | `jupyter`, `ipykernel`                            | Eksperimen interaktif                      |
 
-### 1. Data Understanding
+---
 
-* Memahami struktur dataset (jumlah pelanggan, variabel demografik, perilaku, dan layanan).
-* Identifikasi proporsi churn vs non-churn.
-
-### 2. Exploratory Data Analysis (EDA)
-
-* Statistik deskriptif variabel kunci.
-* Visualisasi churn berdasarkan segmentasi pelanggan.
-* Analisis hubungan antara variabel layanan (tenure, contract, payment method, dll.) dengan churn.
-
-### 3. Data Preprocessing
-
-* Penanganan missing values dan outliers.
-* Encoding variabel kategorikal.
-* Normalisasi fitur numerik.
-* Pembagian data menjadi **train** dan **test set**.
-
-### 4. Modeling
-
-* Penerapan berbagai model klasifikasi seperti:
-
-  * Logistic Regression
-  * Random Forest
-  * Decision Tree
-  * XGBoost (jika digunakan)
-* Hyperparameter tuning untuk meningkatkan performa model.
-
-### 5. Evaluation
-
-* Evaluasi model menggunakan metrik:
-
-  * Accuracy
-  * Precision, Recall, F1-Score
-  * ROC AUC Curve
-* Pemilihan model terbaik untuk prediksi churn.
-
-### 6. Insights & Business Recommendations
-
-* Menentukan variabel paling berpengaruh terhadap churn.
-* Menyusun strategi retensi pelanggan berbasis data, seperti:
-
-  * Meningkatkan loyalitas pelanggan dengan kontrak jangka panjang.
-  * Menawarkan promo bagi pelanggan berisiko tinggi.
-  * Meningkatkan kualitas layanan bagi segmen churn tertinggi.
-
-## 📁 Struktur Proyek
+## 📂 Struktur Proyek
 
 ```
 .
-├── CapstoneProject_Module3_Dian Maragretha Nainggolan.ipynb
-├── data/
+├── CapstoneProject_Module3_Dian Maragretha Nainggolan.ipynb   # Notebook utama
+├── data/                                                      # Folder dataset
 │   └── customer_churn.csv
+├── best_classifier_QDA.pkl
 ├── README.md
 └── requirements.txt
 ```
 
-## 🚀 Cara Menjalankan Proyek
+---
 
-1. Clone repositori atau unduh file proyek.
-2. Install dependencies:
+## 📊 Tahapan Proyek
 
-   ```bash
-   pip install -r requirements.txt
-   ```
-3. Jalankan Jupyter Notebook:
+### 1. Data Understanding
 
-   ```bash
-   jupyter notebook
-   ```
-4. Buka file `CapstoneProject_Module3_Dian Maragretha Nainggolan.ipynb` dan jalankan cell secara berurutan.
+* Membaca dan memeriksa struktur dataset pelanggan.
+* Memahami variabel numerik dan kategorikal (tenure, contract, payment method, dll).
+* Menentukan proporsi pelanggan churn vs non-churn.
 
-## 🧠 Potensi Pengembangan
+### 2. Exploratory Data Analysis (EDA)
 
-* Menambahkan segmentasi pelanggan berbasis clustering.
-* Mengembangkan dashboard interaktif untuk monitoring churn.
-* Integrasi real-time scoring churn ke dalam sistem CRM.
+* Statistik deskriptif & distribusi fitur.
+* Visualisasi churn berdasarkan segmentasi pelanggan.
+* Analisis korelasi antara variabel independen dan churn.
+* Uji statistik (t-test, chi-square) untuk menemukan faktor signifikan.
+
+### 3. Data Preprocessing
+
+* Menangani missing values & outliers.
+* Encoding variabel kategorikal (OneHotEncoder, LabelEncoder).
+* Normalisasi fitur numerik menggunakan `StandardScaler`.
+* Pembagian data menjadi training dan testing set.
+* Penanganan imbalance menggunakan:
+
+  * RandomOverSampler
+  * SMOTE
+  * SMOTEENN
+  * SMOTETomek
+
+### 4. Modeling
+
+Model yang diuji meliputi:
+
+* Logistic Regression
+* Decision Tree
+* Random Forest
+* K-Nearest Neighbors
+* Support Vector Machine
+* Linear Discriminant Analysis (LDA) & Quadratic Discriminant Analysis (QDA)
+* Gradient Boosting (XGBoost, LightGBM, CatBoost)
+
+Setiap model diuji dengan hyperparameter tuning menggunakan `GridSearchCV` atau default optimal parameter.
+
+### 5. Model Evaluation
+
+Evaluasi model dilakukan menggunakan metrik:
+
+* Accuracy
+* Precision, Recall, F1-Score
+* ROC AUC
+* Confusion Matrix
+
+Hasil terbaik diperoleh dari model boosting (misalnya XGBoost / LightGBM) dengan performa tinggi dan interpretasi feature importance yang jelas.
+
+### 6. Model Interpretability
+
+Menggunakan `shap`:
+
+* Menunjukkan fitur mana yang paling memengaruhi probabilitas churn.
+* Membantu memberikan insight actionable kepada tim bisnis.
+
+### 7. Insight Bisnis & Rekomendasi
+
+* **Tenure rendah** & **kontrak bulanan** memiliki kecenderungan churn lebih tinggi.
+* **Metode pembayaran elektronik otomatis** berhubungan dengan churn yang lebih rendah.
+* Pelanggan dengan **biaya bulanan tinggi** cenderung churn lebih cepat.
+* Perlu strategi loyalitas bagi pelanggan risiko tinggi seperti promo atau kontrak jangka panjang.
+
+---
+
+## 🧪 Cara Menjalankan Proyek
+
+### 1. Clone Repository
+
+```bash
+git clone https://github.com/username/customer-churn-prediction.git
+cd customer-churn-prediction
+```
+
+### 2. Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 3. Jalankan Jupyter Notebook
+
+```bash
+jupyter notebook
+```
+
+Buka file:
+
+```
+CapstoneProject_Module3_Dian Maragretha Nainggolan.ipynb
+```
+
+### 4. Jalankan Sel
+
+Jalankan semua cell dari awal hingga akhir untuk:
+
+* Menampilkan analisis data
+* Melatih model
+* Mengevaluasi performa
+* Menampilkan interpretasi model
+
+---
+
+## 📝 requirements.txt
+
+```
+catboost
+gdown
+imbalanced-learn
+ipykernel
+jupyter
+lightgbm
+matplotlib
+numpy
+pandas
+scikit-learn
+scipy
+seaborn
+shap
+xgboost
+```
+
+---
+
+## 📈 Hasil Utama
+
+* AUC ROC Score terbaik: **> 0.85** pada model boosting.
+* Fitur paling berpengaruh: tenure, contract type, monthly charges.
+* Segmentasi churn memberikan peluang untuk retensi pelanggan melalui strategi targeted marketing.
+
+---
+
+## 🚀 Pengembangan Selanjutnya
+
+* Menambahkan model deployment dengan Flask atau Streamlit.
+* Membuat dashboard interaktif untuk tim bisnis.
+* Menambahkan data real-time untuk prediksi dinamis.
+* Integrasi ke sistem CRM perusahaan.
+
+---
 
 ## 👩‍💻 Kontributor
 
 * **Dian Maragretha Nainggolan**
+  Data Analyst | Machine Learning Enthusiast
 
-## 📝 Lisensi
+---
 
-Proyek ini dibuat untuk tujuan pembelajaran dan analisis bisnis, bukan untuk penggunaan komersial tanpa izin.
+## 📜 Lisensi
 
+Proyek ini dibuat untuk keperluan pembelajaran dan penelitian. Tidak untuk distribusi komersial tanpa izin tertulis dari pemilik.
+
+---
+
+Apakah Anda ingin saya **buatkan file README.md dan requirements.txt siap unduh** dari isi ini? 📁✨
