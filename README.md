@@ -70,7 +70,7 @@ Proyek ini menggunakan Python dan berbagai library populer untuk analisis data d
 
 ### 3. Data Preprocessing
 
-* Menangani missing values & outliers.
+* Menangani duplikat.
 * Encoding variabel kategorikal (OneHotEncoder, LabelEncoder).
 * Normalisasi fitur numerik menggunakan `StandardScaler`.
 * Pembagian data menjadi training dan testing set.
