@@ -1,4 +1,4 @@
-# Customer Churn Prediction for telecommunication company
+# Customer Churn Prediction for Telecommunication Company
 
 This project focuses on predicting **customer churn** at telecommunication company using machine learning, enabling more efficient and targeted retention strategies. This telecommunication company relies heavily on subscription-based revenue models. Reducing churn means maintaining revenue stability and lowering customer acquisition costs.
 
