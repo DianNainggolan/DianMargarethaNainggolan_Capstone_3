@@ -1,24 +1,24 @@
-# Customer Churn Prediction for Telkom Indonesia
+# Customer Churn Prediction for telecommunication company
 
-This project focuses on predicting **customer churn** at Telkom Indonesia using machine learning, enabling more efficient and targeted retention strategies. Telkom, as a major telecommunications company, relies heavily on subscription-based revenue models. Reducing churn means maintaining revenue stability and lowering customer acquisition costs.
+This project focuses on predicting **customer churn** at telecommunication company using machine learning, enabling more efficient and targeted retention strategies. This telecommunication company relies heavily on subscription-based revenue models. Reducing churn means maintaining revenue stability and lowering customer acquisition costs.
 
 ---
 
 ## 🧠 Business Understanding
 
-Telkom Indonesia provides broadband, telephony, IPTV, and digital solutions to residential and business customers across Indonesia. Its business model depends on:
+Telecommunication company provides broadband, telephony, IPTV, and digital solutions to residential and business customers. Its business model depends on:
 
 * **Long-term customer retention**, especially for broadband and bundled services.
 * **Early churn detection** to minimize revenue loss.
 * **Targeted campaigns** to reduce marketing costs.
 
-Churn prediction models help Telkom identify **which customers are at high risk of leaving**, so marketing and service teams can act proactively.
+Churn prediction models help telecommunication company identify **which customers are at high risk of leaving**, so marketing and service teams can act proactively.
 
 ---
 
 ## 📊 Data Understanding
 
-The dataset represents Telkom customer records with variables such as:
+The dataset represents telecommunication company customer records with variables such as:
 
 * **CustomerID** — unique customer identifier
 * **Tenure** — duration of customer’s subscription
@@ -69,7 +69,7 @@ This combination offered the best balance between catching churners and minimizi
 | Without Model       | 10,000              | 2,500          | $200,000   | $0         |
 | With QDA + SMOTEENN | 4,300               | 2,125          | $86,000    | $114,000   |
 
-Using the model, Telkom can **cut campaign costs by more than 50%** while still detecting 85% of churn cases.
+Using the model, telecommunication company can **cut campaign costs by more than 50%** while still detecting 85% of churn cases.
 
 ---
 
@@ -92,12 +92,12 @@ Using the model, Telkom can **cut campaign costs by more than 50%** while still 
 
 ---
 
-## 🧠 Why This Matters for Telkom
+## 🧠 Why This Matters for telecommunication company
 
-By combining predictive analytics with business strategy, Telkom Indonesia can:
+By combining predictive analytics with business strategy, telecommunication company can:
 
 * Lower churn rate significantly.
 * Reduce unnecessary marketing spend.
 * Personalize retention programs for maximum impact.
-* Strengthen long-term customer loyalty in a competitive telco market.
+* Strengthen long-term customer loyalty in a competitive market.
 
